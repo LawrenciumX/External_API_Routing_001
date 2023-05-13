@@ -1,6 +1,8 @@
 # External_API_Routing_001
 External_API_Routing calls an external free API called https://jsonplaceholder.typicode.com/ and modifies the response data.
 
+**_Command:npm start_**
+
 ## Sample GET API Call
 API fetches all data or filters data based on the id parameter.
 
