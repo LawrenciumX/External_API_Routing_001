@@ -1,0 +1,20 @@
+{
+  "name": "external_api",
+  "version": "1.0.0",
+  "description": "A REST API that calls an external API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LawrenciumX/External_API_Routing_001"
+  },
+  "author": "Lawrencium_X",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2"
+  }
+}
