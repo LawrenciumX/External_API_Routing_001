@@ -7,13 +7,25 @@ app.use(express.json());
 
 // GET API endpoint
 app.get('/posts', async (req, res) => {
+    if(!req.query.id)
+    {
+        try {
+            const response = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
+            res.json(response.data);
+        } catch (error) {
+            res.status(500).send(error.message);
+        }
+     }
+     else{
     try {
         let id = req.query.id;
-const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
-res.json(response.data);
-} catch (error) {
-    res.status(500).send(error.message);
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
 }
+
 });
 
 // PUT API endpoint
